@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b13" />
+    <meta
+      name="description"
+      content="tomrick99 的动态 GitHub 贡献热力图，包含公开与已公开计数的私有贡献。"
+    />
+    <title>tomrick99 · Contribution Flow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="topbar">
+        <a class="identity" href="https://github.com/tomrick99" target="_blank" rel="noreferrer">
+          <img src="https://github.com/tomrick99.png?size=96" alt="tomrick99 的 GitHub 头像" />
+          <span>
+            <strong>tomrick99</strong>
+            <small>GitHub contribution flow</small>
+          </span>
+        </a>
+
+        <div class="top-actions">
+          <span class="live-pill"><i></i> Live data</span>
+          <button class="replay-button" id="replayButton" type="button" aria-label="重新播放动画">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 7v5h-5M4.8 9a8 8 0 1 1-.1 6" />
+            </svg>
+            Replay
+          </button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">A YEAR IN MOTION</p>
+          <h1>Small commits.<br /><span>Visible momentum.</span></h1>
+          <p class="intro">
+            每一次提交都留下一点光。刷新页面，让过去一年的节奏重新流动起来。
+          </p>
+        </div>
+        <div class="orbital-mark" aria-hidden="true">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orbit-core"></div>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-labelledby="heatmapTitle">
+        <div class="dashboard-head">
+          <div>
+            <p class="section-kicker">LAST 12 MONTHS</p>
+            <h2 id="heatmapTitle">Contribution pulse</h2>
+          </div>
+          <div class="legend" aria-label="贡献强度图例">
+            <span>Quiet</span>
+            <i data-level="0"></i>
+            <i data-level="1"></i>
+            <i data-level="2"></i>
+            <i data-level="3"></i>
+            <i data-level="4"></i>
+            <span>Busy</span>
+          </div>
+        </div>
+
+        <div class="heatmap-frame" id="heatmapFrame">
+          <div class="loading-state" id="loadingState">
+            <span></span>
+            Reading the timeline…
+          </div>
+          <div class="month-row" id="monthRow" aria-hidden="true"></div>
+          <div class="heatmap-stage">
+            <div class="weekday-row" aria-hidden="true">
+              <span>Mon</span><span>Wed</span><span>Fri</span>
+            </div>
+            <div class="heatmap" id="heatmap" role="grid" aria-label="GitHub 贡献热力图"></div>
+            <div class="comet" id="comet" aria-hidden="true"><i></i></div>
+          </div>
+          <div class="tooltip" id="tooltip" role="status"></div>
+        </div>
+
+        <div class="stats" aria-live="polite">
+          <article>
+            <span class="stat-icon stat-icon-total">↗</span>
+            <div><strong id="totalCount">—</strong><small>contributions</small></div>
+          </article>
+          <article>
+            <span class="stat-icon stat-icon-days">◌</span>
+            <div><strong id="activeDays">—</strong><small>active days</small></div>
+          </article>
+          <article>
+            <span class="stat-icon stat-icon-streak">⌁</span>
+            <div><strong id="longestStreak">—</strong><small>longest streak</small></div>
+          </article>
+          <p class="privacy-note">
+            <span>◆</span> Private contributions are shown as anonymous counts when enabled on GitHub.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <span>Designed around real GitHub activity.</span>
+        <a href="https://github.com/tomrick99" target="_blank" rel="noreferrer">View profile ↗</a>
+      </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
